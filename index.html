@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Media Innovation - RICOLE CHEN</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="TK">
+    <meta name="keywords" content="TK">
+    <meta name="author" content="TK">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    
+    <link rel="stylesheet" type="text/css" href="https://mediainnovation.camd.northeastern.edu/2021/masters/css/masters.css">
+    <link rel="stylesheet" type="text/css" href="https://mediainnovation.camd.northeastern.edu/2025/masters/css/2025masters.css">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://unpkg.com/scrollama"></script>
+
+</head>
+    
+
+
+
+<body>
+    
+ <!---------------------------- Hamburger menu –––––––––––––––––––––––––––––––––––– -->
+    <nav role="navigation" class="essential-nav">
+    <div id="menuToggle">
+        <!--
+        A fake / hidden checkbox is used as click reciever,
+        so you can use the :checked selector on it.
+        -->
+        <input type="checkbox"/>
+        <!--
+        Some spans to act as a hamburger.
+        -->
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+        <a href="https://mediainnovation.camd.northeastern.edu/2025/masters/bucci/index.html"><li>Danae Bucci</li></a>
+        <a href="https://mediainnovation.camd.northeastern.edu/2025/masters/cao/index.html"><li>Wenqi Cao</li></a>
+        <a href="https://mediainnovation.camd.northeastern.edu/2025/masters/chen/index.html"><li>Ricole Chen</li></a>
+        <a href="https://mediainnovation.camd.northeastern.edu/2025/masters/dsouza/index.html"><li>Vivica Dsouza</li></a>
+        <a href="https://mediainnovation.camd.northeastern.edu/2025/masters/fan/index.html"><li>Shuyu Fan</li></a>
+        <a href="https://mediainnovation.camd.northeastern.edu/2025/masters/jia/index.html"><li>Haolong Jia</li></a>
+        <a href="https://mediainnovation.camd.northeastern.edu/2025/masters/liu/index.html"><li>Jiarui Liu</li></a>
+        <a href="https://mediainnovation.camd.northeastern.edu/2025/masters/mosso/index.html"><li>MariCarmen Mosso</li></a>
+        <a href="https://mediainnovation.camd.northeastern.edu/2025/masters/nie/index.html"><li>Chloe Nie</li></a>
+        <a href="https://mediainnovation.camd.northeastern.edu/2025/masters/haris/index.html"><li>Namira Haris</li></a>
+        <a href="https://mediainnovation.camd.northeastern.edu/2025/masters/shi/index.html"><li>Yuanlang Shi</li></a>
+        <a href="https://mediainnovation.camd.northeastern.edu/2025/masters/siljeholm/index.html"><li>Marian Siljeholm</li></a>
+        <a href="https://mediainnovation.camd.northeastern.edu/2025/masters/thalhamer/index.html"><li>Lisa Thalhamer</li></a>
+        <a href="https://mediainnovation.camd.northeastern.edu/2025/masters/zhang/index.html"><li>Shuran Zhang</li></a>
+
+        </ul>
+    </div>
+        
+    </nav>
+    
+            <a href="https://mediainnovation.camd.northeastern.edu/2025/masters/index.html">
+                <div style="width: 50%; height: 50px; margin: 0 25%; position: absolute; top:0;z-index:5;"></div> <!-- Make logo clickable by wrapping a div in a link -->
+            </a>
+    
+<!-- ---------YOUR STORY STARTS HERE ------- -->   
+<img src="images/monalisa.jpg", width:100%>
+
+ <!-- main story starts here    -->
+<div class="header">
+<h1>For the 'Gram, or for the Art?</h1>
+<h2>The way we engage with museums now — taking photos, sharing, posing — reflects how we process culture in the social media age.</h2>
+<h3>By Ricole Chen</h3>
+</div>    
+
+<div class = "container">
+    <p>“Wait, let me take a photo first.”
+        At a Cézanne exhibit in Shanghai, crowds pose in front of a painting and then quickly walk to the next. "There’s people who are, like, 'Do it, move on, you know? Do it for the 'gram,'" says Alexis Henson, who studies how social media is reshaping museum attendance and engagement. What was once mostly heard at the restaurant table is now common in museums, and it's changing how visitors experience art — and how museums connect with visitors.
+        </p>
+
+        <p>Museums are no longer the solemn, academic spaces they once were. Many new institutions, especially the pop-up and immersive museums are built for cameras and interactions. In 2016, the first Museum of Ice Cream opened in New York City. Its pink sprinkle pool and different settings like the airplane became a backdrop for visitors' selfies on Instagram.</p>
+
+</div>
+
+<!-- chart starts here -->
+<section id="scrolly" style="position: relative; padding: 4rem 2rem; background-color: #f8f8f8;">
+  <style>
+    @font-face {
+      font-family: "LeJeunePoster-Regular";
+      src: url(https://mediainnovation.camd.northeastern.edu/2021/loveinthetimeofcovid/fonts/LeJeunePoster-Regular.otf);
+    } 
+
+    @font-face {
+      font-family: "LeJeunePoster-RegularItalic";
+      src: url(https://mediainnovation.camd.northeastern.edu/2021/loveinthetimeofcovid/fonts/LeJeunePoster-RegularItalic.otf);
+    }
+
+    #scrolly * {
+      box-sizing: border-box;
+    }
+    #scrolly .scrolly-container {
+      display: grid;
+      grid-template-columns: 45% 55%;
+      gap: 4rem;
+      max-width: 1600px;
+      margin: 0 auto;
+      padding: 0 3rem;
+    }
+    #scrolly article {
+      position: relative;
+      padding: 0;
+    }
+    #scrolly figure {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 10vh;
+      height: 80vh;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding-left: 2rem;
+    }
+    #scrolly #gram-chart {
+      width: 100%;
+      max-width: 950px;
+    }
+    #scrolly .step {
+      margin: 0 0 80vh 0;
+      background: white;
+      padding: 40px 48px;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+      position: relative;
+    }
+    #scrolly .step:first-child {
+      margin-top: 20vh;
+    }
+    #scrolly .step:last-child {
+      margin-bottom: 60vh;
+    }
+    #scrolly .step p {
+      font-size: 20px;
+      line-height: 1.7;
+      color: #333;
+      margin: 0;
+    }
+    #scrolly .photo-example {
+      margin-top: 24px;
+      display: flex;
+      justify-content: center;
+    }
+    #scrolly .photo-placeholder {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+      object-fit: contain;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+    #scrolly svg text {
+      font-size: 12px;
+      font-weight: 400;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+    #scrolly .tag {
+      font-size: 24px !important;
+      font-weight: 700 !important;
+      font-family: "LeJeunePoster-Regular", system-ui, -apple-system, sans-serif;
+    }
+    #scrolly .pct {
+      font-size: 15px !important;
+      fill: #111;
+    }
+    #scrolly .row {
+      transition: opacity 0.3s ease;
+    }
+    #scrolly .seg {
+      transition: opacity 0.15s ease, stroke 0.15s ease;
+    }
+    #scrolly .legend text {
+      font-size: 14px !important;
+      font-family: "LeJeunePoster-Regular", system-ui, -apple-system, sans-serif;
+    }
+    #gram-tip {
+      position: fixed;
+      pointer-events: none;
+      z-index: 50;
+      background: #111;
+      color: #fff;
+      padding: 8px 12px;
+      border-radius: 4px;
+      font-size: 14px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+      transform: translate(-50%, -130%);
+      white-space: nowrap;
+      opacity: 0;
+      transition: opacity 0.15s ease;
+    }
+  </style>
+
+  <div class="scrolly-container">
+    <article>
+      <div class="step summary" data-step="summary">
+        <p><strong>Visitors post different content based on different types of museum they visit. Some museums are built for Instagrammable posts.
+        </strong></p>
+      </div>
+      <div class="step" data-step="intro">
+        <p>This visualization compares what visitors share on Instagram under three museum hashtags:
+        <strong>#MFABoston</strong>, <strong>#ICABoston</strong>, and <strong>#MuseumOfIceCream</strong>, based on the most recent 100 posts from each on Instagram.</p>
+      </div>
+      <div class="step" data-step="mfa">
+        <p>At the <strong>Museum of Fine Arts</strong>, posts are evenly split between <em>artwork</em> and <em>events</em>.</p>
+        <div class="photo-example">
+          <img src="images/mfa-posts.jpg" alt="MFA Boston Instagram posts" class="photo-placeholder">
+        </div>
+      </div>
+      <div class="step" data-step="ica">
+        <p>The <strong>ICA Boston</strong> shows nearly equal shares of <em>selfies</em> and <em>exhibits</em>.</p>
+        <div class="photo-example">
+          <img src="images/ica-posts.jpg" alt="ICA Boston Instagram posts" class="photo-placeholder">
+        </div>
+      </div>
+      <div class="step" data-step="moic">
+        <p>In contrast, the <strong>Museum of Ice Cream</strong> is dominated by <em>selfies</em>.</p>
+        <div class="photo-example">
+          <img src="images/moic-posts.jpg" alt="Museum of Ice Cream Instagram posts" class="photo-placeholder">
+        </div>
+      </div>
+    </article>
+
+    <figure>
+      <div id="gram-chart"></div>
+    </figure>
+  </div>
+</section>
+
+<div id="gram-tip"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+<script src="https://unpkg.com/scrollama"></script>
+
+<script>
+(function() {
+  // Wait for libraries to load
+  if (typeof d3 === 'undefined' || typeof scrollama === 'undefined') {
+    console.error('D3 or Scrollama not loaded');
+    return;
+  }
+  
+  const data = [
+    { tag: "#MFABoston", people: 17, artwork: 37, space: 10, event: 36 },
+    { tag: "#ICABoston", people: 34, artwork: 35, space: 16, event: 15 },
+    { tag: "#MuseumOfIcecream", people: 76, artwork: 17, space: 4, event: 3 },
+  ];
+  const keys = ["people", "artwork", "space", "event"];
+  const labels = {
+    people: "People / Selfies",
+    artwork: "Artwork / Exhibit",
+    space: "Space / Architecture",
+    event: "Event / Information",
+  };
+  const colors = {
+    people: "#F4A6A2",
+    artwork: "#98B3F5",
+    space: "#A9ADB3",
+    event: "#EDD191",
+  };
+
+  const rowH = 80,
+    gap = 40,
+    leftMargin = 240,
+    rightMargin = 20,
+    barW = 700;
+
+  const chartWrap = d3.select("#gram-chart");
+  const tip = document.getElementById("gram-tip");
+
+  function render() {
+    chartWrap.selectAll("*").remove();
+    const height = data.length * (rowH + gap) + 60;
+    const svg = chartWrap
+      .append("svg")
+      .attr("width", "100%")
+      .attr("viewBox", `0 0 ${barW + leftMargin + rightMargin} ${height}`)
+      .style("overflow", "visible");
+
+    const g = svg.append("g").attr("transform", `translate(${leftMargin},50)`);
+
+    const y = d3
+      .scaleBand()
+      .domain(data.map((d) => d.tag))
+      .range([0, data.length * (rowH + gap)])
+      .paddingInner(gap / (rowH + gap));
+
+    const row = g
+      .selectAll(".row")
+      .data(data)
+      .join("g")
+      .attr("class", (d) => "row row-" + d.tag.replace(/[^a-z0-9]/gi, "").toLowerCase())
+      .attr("transform", (d) => `translate(0,${y(d.tag)})`)
+      .style("opacity", 1);
+
+    row.each(function (d) {
+      let x0 = 0;
+      keys.forEach((k) => {
+        const w = barW * (d[k] / 100);
+        d3.select(this)
+          .append("rect")
+          .attr("class", "seg seg-" + k)
+          .attr("x", x0)
+          .attr("y", 0)
+          .attr("width", w)
+          .attr("height", rowH)
+          .attr("fill", colors[k])
+          .on("mousemove", (event) => {
+            d3.select(this.parentNode)
+              .selectAll(".seg")
+              .style("opacity", 0.45)
+              .style("stroke", "none");
+            d3.select(event.currentTarget)
+              .style("opacity", 1)
+              .style("stroke", "#111")
+              .style("stroke-width", 2);
+
+            tip.textContent = `${labels[k]} — ${d[k]}%`;
+            tip.style.left = event.clientX + "px";
+            tip.style.top = event.clientY + "px";
+            tip.style.opacity = 1;
+          })
+          .on("mouseleave", () => {
+            d3.select(this.parentNode)
+              .selectAll(".seg")
+              .style("opacity", 1)
+              .style("stroke", "none");
+            tip.style.opacity = 0;
+          });
+
+        d3.select(this)
+          .append("text")
+          .attr("class", "pct")
+          .attr("x", x0 + w / 2)
+          .attr("y", rowH / 2 + 6)
+          .attr("text-anchor", "middle")
+          .text(d[k] + "%");
+
+        x0 += w;
+      });
+    });
+
+    svg
+      .append("g")
+      .attr("transform", `translate(${leftMargin - 12},50)`)
+      .selectAll("text")
+      .data(data)
+      .join("text")
+      .attr("class", "tag")
+      .attr("x", 0)
+      .attr("y", (d) => y(d.tag) + rowH / 2 + 8)
+      .attr("text-anchor", "end")
+      .text((d) => d.tag);
+
+    const lg = svg
+      .append("g")
+      .attr("class", "legend")
+      .attr("transform", `translate(${leftMargin}, 18)`);
+    let lx = 0;
+    ["people", "artwork", "space", "event"].forEach((k) => {
+      const it = lg.append("g").attr("transform", `translate(${lx},0)`);
+      it.append("rect").attr("width", 14).attr("height", 14).attr("fill", colors[k]);
+      it.append("text").attr("x", 20).attr("y", 11).text(k.charAt(0).toUpperCase() + k.slice(1));
+      lx += 130;
+    });
+  }
+
+  render();
+
+  // Scrollama setup
+  const scroller = scrollama();
+  const map = { summary: null, intro: null, mfa: "mfaboston", ica: "icaboston", moic: "museumoficecream" };
+
+  function setHighlight(rowKey) {
+    const rows = d3.select("#gram-chart").selectAll(".row");
+    rows.style("opacity", 1);
+    if (rowKey) {
+      rows
+        .filter(function () {
+          return !this.classList.contains("row-" + rowKey);
+        })
+        .style("opacity", 0.25);
+    }
+  }
+
+  function handleStepEnter(response) {
+    const step = response.element.dataset.step;
+    setHighlight(map[step]);
+  }
+
+  function init() {
+    scroller
+      .setup({
+        step: "#scrolly article .step",
+        offset: 0.5,
+        debug: false
+      })
+      .onStepEnter(handleStepEnter);
+
+    window.addEventListener("resize", scroller.resize);
+  }
+
+  init();
+})();
+</script>
+
+
+<div class = "container">
+
+<p>According to Google Trends, what people are looking for when they search for museums has shifted over the past twenty years from educational and formal to interactive and entertaining. From 2004 to 2010, the searches were focused on regional encyclopedic art museums, or institutional names, but between 2010 and 2015, museums like the Children’s Museum, and Museum of Feelings began to trend, reflecting a growing desire for social, shareable, and immersive experiences. From 2017 to 2021, "Instagrammable museums” marked a turning point. Museums were no longer limited to art or artifacts. Searches for visually driven, interactive experiences expanded the definition of museum, such as Museum of Icecream, Body Worlds, Museum of Illusions, Spy Museum, and Museum of Dream Space, and the trend continued until today.</p>
+
+        <p>But that trend is shifting. As Claire Ogden, who works in arts communications at the contemporary art space at Northeastern University, Gallery 360, explains, “People aren’t just gonna come see a show because it looks great on their feed anymore.” The aesthetic hook still draws attention, but museums now rely on deeper, participatory experiences to sustain it.</p>
+    
+        <p>Visitors often photograph art and wall labels but never revisit them, Ogden recalls a class visit at the Gallery 360, when a professor told students, “I know you’re tempted to take a picture and go home, but the assignment is to sit with one artwork for at least five minutes. It’s more meaningful to do it here.” For some, the behavior feels like a shallow interaction that doesn't fully engage with the art. But it is also a chance, and a challenge, for museums to broaden audience engagement and extend their reach, reflecting a larger pattern of changes in how we consume culture in the digital age.</p>
+
+
+<p>“It used to be that people wanted a docent or a planned tour. And now they want to experience the arts more casually, more dynamically, and walk through and see what they want without the planned experience.” says Janis Treiber, the Director of Visitor and Retail Experience at North Carolina Museum of Art.
+</p>
+
+<p>“25 years ago, you were not allowed to take photos in museums,” says David Pires, the manager of visitor experience at the Institute of Contemporary Art in Boston. “Now, people are thinking about what are the Instagrammable moments, where to take selfies. With phone technology making it easy to take pictures, many visitors are looking for portability.”  
+</p>
+
+<p>“Before 2021, ICA would ban videos to make sure they don’t spread,” recalls Jose Cortez, visual services supervisor at the Institute of Contemporary Art in Boston. That all changed with the “Figures of Speech” exhibit of work by designer Virgil Abloh. “They wanted young people to share their experience.... It had a positive impact so the museum kept the policy.”</p>
+
+<p>“In the past, only curators were the person to shape the space,” adds Pires. “Now, young people are coming in to curate their own experiences outside and within the museums.” Pires calls this new way of experiencing museums 'self-curation.'”</p>
+
+<figure class="mifigure">
+    <img src="images/cortez.JPG" alt="Jose Cortez in the ICA gallery.">
+    <figcaption>Jose Cortez in the ICA gallery.</figcaption>
+    </figure>
+
+    <p>Visitors feel the same way. “We're our own curators,” says museum-goer Zoe Mumford. “The way that we present ourselves online is very similar to an art exhibit…. Social media is [how] we are curating our own museums of ourselves.” says Mumford.</p>
+
+    <p>“One of the changes is the idea that people are looking for third spaces,” adds Pires “A museum is not only a space for art, but also for socializing, and stepping outside of their usual spaces.” Ogden adds, “It’s such a class divide. Middle and upper-class people are more comfortable in museums. So programs like free days and family initiatives are huge.”
+    </p>
+
+    <p>
+        Pires recalls his experience working in the Philadelphia Art Museum before, “In the Philly Art Museum, you can see people posting one exhibit, and the attendance rate goes up straight.” says. Cortez agrees, “It’s a positive cycle,” he said. “Some people know the ICA as an event-based museum.”
+        </p>
+
+<p>Museums as third spaces have long existed. Across town, the Museum of Fine Arts’ “First Fridays” have done the same since the mid 2000s. What began as a monthly evening tradition still fills the museum’s courtyard with people sipping wine, dancing to a DJ, and making art together. The enduring popularity of these nights shows that using museums as spaces for socializing isn’t new, it’s just that social media has amplified how those moments are shared and seen.
+</p>
+
+    <div class="photogrid">
+        <figure class="mifigure">
+        <img src="images/mfa1.jpg" alt="Museum of Fine Arts Boston at night.">
+        <figcaption>Museum of Fine Arts Boston at night.</figcaption>
+        </figure>
+        
+        <figure class="mifigure">
+        <img src="images/mfa2.jpg" alt="DJ Slick Vick during her performance at MFA First Friday.">
+        <figcaption>DJ Slick Vick at the MFA First Friday.</figcaption>
+        </figure>
+    </div>
+
+    <p>“The previous times I've been here have only been a field trip during the day,” says Nid Kittisapkajon, who attended the MFA First Friday. “Now it's some drinks, some art at night. It is a different experience than a regular day at a museum.” </p>
+      
+      <p>Juliana Barton, director of Northeastern’s Center for the Arts and curator of Gallery 360, sees social media as both outreach and identity-building. “I think of social media as a form of engagement that brings people physically into the museum, by seeing information online,” Barton says. “But increasingly, there are so many people who follow museums on social media who’ve never been to space. It helps form a sort of brand identity and awareness for institutions — even for visitors who can’t physically come.”</p>
+    
+<p> But this new way of experiencing art can also be disruptive — even for younger visitors. That’s what it felt like to Mumford, who visited the Impressionist galleries at the Louvre in Paris. “There were droves and droves of people, especially around any Monet or Van Gogh that [you’d see] on Pinterest.” She remembers thinking, “I can't even see the painting. I'm just seeing people that are all waiting to get a photo of it.”
+</p>
+
+<figure class="mifigure">
+    <img src="images/opening2.png" alt="Visitors taking photos and videos using phones and cameras in a museum in Shanghai.">
+    <figcaption> Vistors taking photos of the Cézanne exhibit in Shanghai.</figcaption>
+    </figure>
+
+    <p>Yet, Mumford also sees the value in it. “I think it's just great that people are getting to museums, no matter what,” she says. “Even if they're there to take pictures, there's still the possibility that they'll see something that sticks with them.” </p>
+
+    <p>The act of “capturing the moment” does not only exist in museums. In restaurants, parks, concerts, streets, anywhere you can think of. The gesture of lifting a phone has become second nature. We’ve all become our own curators. It’s not only of art, but of how we live and how we are seen.</p>
+
+    <figure class="mifigure">
+        <img src="images/Fox Tv GIF by BH90210.gif" alt="Clip of The gang of the original Beverly Hills, 90210 television show, saying 'Take photos, post.'">
+        <figcaption>source: Giphy</figcaption>
+        </figure>
+
+
+    <p>“There’s this phrase called ‘attention fracking.’ Everyone’s trying to sell your attention, so no one can really pay close attention anymore.” Ogden says, “Because everything is in your phone these days… it kind of flattens everything. You might start to engage less deeply with things that matter more, just because you’re so burnt out by everything being on your phone.” In a world of high-paced information, where every platform or everyone is competing for people’s attention, even a few minutes in a museum can feel hard. Visitors scroll through art the same way they scroll through feeds. </p>
+        
+    <p>
+        Whether for the 'gram or for the art, the behavior at modern museums has become a mirror — reflecting not just what we value, but how we frame it.
+        </p>
+</div>
+
+
+
+<p style="text-align: center; padding:30px 0; margin-top: 50px; font-family:'Helvetica';border-top:1px solid black">Produced by candidates for the MS degree in the Media Innovation & Data Communication program at the <a href="https://camd.northeastern.edu/journalism-at-northeastern/" style="text-decoration: underline" >Northeastern University School of Journalism.</a> &#169; 2025</p>
+
+<h5 style="border-top: none; margin-top: -2%; text-align: center"><img src="https://mediainnovation.camd.northeastern.edu/2021/loveinthetimeofcovid/images/seal_logotype-768x252.png" style="width:300px"></h5>
+
+<script src="https://unpkg.com/scrollama"></script>
+</body>
+
+</html>
